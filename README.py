@@ -4,13 +4,13 @@ python class Node:
         self.left = left         
         self.right = right  
         
-    def sum_tree(node):     
+   1) def sum_tree(node):     
             if node is None:         
                 return 0     
             else:         
                 return node.value + sum_tree(node.left) + sum_tree(node.right)
                 
-    def find_max(root):
+   2) def find_max(root):
     if root is None:
         return None
     elif root.right is None:
@@ -18,7 +18,7 @@ python class Node:
     else:
         return find_max(root.right)
         
-    def find_min_node(node):
+   3) def find_min_node(node):
    
 
     
@@ -37,7 +37,7 @@ python class Node:
 
     return min_val
         
-    def count_occurrences(root, element):
+  4)  def count_occurrences(root, element):
     if root is None:
         return 0
     count = 1 if root.data == element else 0
@@ -45,7 +45,7 @@ python class Node:
     count += count_occurrences(root.right, element)
     return count
     
-    def print_leaf_nodes(node):
+   5) def print_leaf_nodes(node):
     if node is None:
         return
     if node.left is None and node.right is None:
@@ -53,7 +53,7 @@ python class Node:
     print_leaf_nodes(node.left)
     print_leaf_nodes(node.right)
     
-    def count_left_children(node):
+  6)  def count_left_children(node):
     count = 0
     if node.left:
         count += 1
